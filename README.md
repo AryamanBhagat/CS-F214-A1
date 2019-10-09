@@ -1,5 +1,5 @@
 # Logic in Computer Science (CS F214) 
-## Assignmet-1 (Fall Semester '19)
+## Assignment-1 (Fall Semester '19)
 
 *Problem Set-1:*
 Given a weighted undirected graph G = (V, E). The weight on an edge (v1, v2) represents the distance between the vertices v1 and v2 {vi V; and (vi, vj) E}. Given a set of weights of edges in the form of prolog clauses:
