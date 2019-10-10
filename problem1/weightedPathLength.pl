@@ -3,26 +3,12 @@
 weight(a,b,10).
 weight(b,c,10).
 weight(c,d,10).
-weight(d,a.10).
-
-% ----predicate to check if 2 nodes are connected---- %
-% connected(X,Y) :-
-%         weight(X,Y, K) ;
-%         (weight(X, Z, L) , connected(Z,Y, M)).
+weight(d,a,10).
+weight(A, B, W) :- weight(B, A, W)
 
 
-% ----predicate to calculate distance---- %
-distance(X,X,0,0).
+% ----predicate to find path---- %
+findpath(X, X, [X], 0).
+findpath(X, Z, P, L) :- weight(X, Z, W), append([X], [Z], P), L is W.  
+findpath(X, Z, P, L) :- findpath(X, Y, P0, L0), weight(Y, Z, W), append(P0, [Z], P), L is W + L0.
 
-distance(X,Y,SoFar,Distance) :-
-        weight(X,Y,Weight),
-        Distance is SoFar + Weight.
-
-distance(X,Y,SoFar,Distance) :-
-        weight(X,Z,Weight),
-        DistanceToZ is SoFar + Weight,
-        distance(Z,Y,DistanceToZ,Distance).
-
-
-% ----wrapper predicate---- %
-distance(X,Y,Distance) :- distance(X,Y,0,Distance).
