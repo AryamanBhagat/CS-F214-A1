@@ -1,11 +1,5 @@
 %input for graph here in format weight(node, node, weight)
 
-
-
-% ----predicate to find path---- %
-findpath(X, X, [X], 0).
-
-
 % ---- edge(A, B, W) ----
 %       edge/3 evaluates to true when one of weight(A, B, W) exist in our knowledge base
 %       It is necessary since this is an undirected graph.
@@ -50,15 +44,3 @@ distance([H1, H2|T], L) :-
 %       findpath/4 evaluates to true when path(X, Z, P) is true. That is, the elements of P form a path from X to Z such that no node (other than the initial and final nodes) maybe repeated.
 %       And distance(P, L) evaluates to true.
 findpath(X, Z, P, L) :- path(X, Z, P), distance(P, L).
-
-
-findpath(X, Z, P, L) :-
-  weight(X, Z, W),
-  append([X], [Z], P),
-  L is W.
-
-findpath(X, Z, P, L) :-
-  findpath(X, Y, P0, L0),
-  weight(Y, Z, W),
-  append(P0, [Z], P),
-  L is W + L0.
