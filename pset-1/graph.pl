@@ -4,9 +4,9 @@ edge(c,d).
 edge(d,a).
 
 % ----predicate to check if 2 nodes are connected---- %
-connected(X,Y) :-
+isConnected(X,Y) :-
         edge(X,Y) ;
-        (edge(X,Z) , connected(Z,Y)).
+        (edge(X,Z) , isConnected(Z,Y)).
 
 
 % ----predicate to calculate distance---- %
