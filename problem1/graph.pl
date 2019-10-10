@@ -12,7 +12,7 @@ isConnected(X,Y) :-
 % ----predicate to calculate distance---- %
 distance(X, Y, SoFar, Distance) :-
         isSame(X, Y),
-        Distance is SoFar
+        Distance is SoFar + 0.0.
 
 distance(X,Y,SoFar,Distance) :-
         edge(X,Y),
@@ -23,6 +23,8 @@ distance(X,Y,SoFar,Distance) :-
         DistanceToZ is SoFar + 1,
         distance(Z,Y,DistanceToZ,Distance).
 
+isSame(X, Y) :-
+        X == Y.
 
 % ----wrapper predicate---- %
 distance(X,Y,Distance) :- distance(X,Y,0,Distance).
