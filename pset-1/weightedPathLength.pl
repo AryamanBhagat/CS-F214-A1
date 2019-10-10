@@ -7,8 +7,8 @@ weight(d,a.10).
 
 % ----predicate to check if 2 nodes are connected---- %
 % connected(X,Y) :-
-%         weight(X,Y) ;
-%         (weight(X,Z) , connected(Z,Y)).
+%         weight(X,Y, K) ;
+%         (weight(X, Z, L) , connected(Z,Y, M)).
 
 
 % ----predicate to calculate distance---- %
