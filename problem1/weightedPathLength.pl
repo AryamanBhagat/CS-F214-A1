@@ -1,11 +1,10 @@
 % Same as graph.pl but with weighted edges
 
-weight(a,b,10).
-weight(b,c,10).
-weight(c,d,10).
-weight(d,a,10).
-weight(A, B, W) :- weight(B, A, W)
+node(a).
 
+node(A) :- weight(A, B, W); weight(B, A, W).
+weight(A, B, W) :- weight(B, A, W).
+weight(A, A, 0) :- weight(A, B, W); weight(B, A, W); node(A).
 
 % ----predicate to find path---- %
 <<<<<<< HEAD
