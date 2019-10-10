@@ -2,6 +2,8 @@
 
 
 
+% ----predicate to find path---- %
+findpath(X, X, [X], 0).
 
 
 % ---- edge(A, B, W) ----
@@ -49,3 +51,14 @@ distance([H1, H2|T], L) :-
 %       And distance(P, L) evaluates to true.
 findpath(X, Z, P, L) :- path(X, Z, P), distance(P, L).
 
+
+findpath(X, Z, P, L) :-
+  weight(X, Z, W),
+  append([X], [Z], P),
+  L is W.
+
+findpath(X, Z, P, L) :-
+  findpath(X, Y, P0, L0),
+  weight(Y, Z, W),
+  append(P0, [Z], P),
+  L is W + L0.
