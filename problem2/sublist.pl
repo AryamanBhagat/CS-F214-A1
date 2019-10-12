@@ -44,7 +44,7 @@ appendEvery(X,[H|T],L) :-
 % listOfSublists/2 stores in L2 the list of all possible sublists of L1
 % Example Usage:
 %	?- listOfSublists([1,2,3,4],L)
-%	L = [[1],[2],[3],[4],[1,2],[1,3],[1,4],[2,3],[2,4],[3,4],[1,2,3],[1,2,4],[1,3,4],[2,3,4],[1,2,3,4]]
+%	L = [[],[1],[2],[3],[4],[1,2],[1,3],[1,4],[2,3],[2,4],[3,4],[1,2,3],[1,2,4],[1,3,4],[2,3,4],[1,2,3,4]]
 %	yes
 
 listOfSublists([],[]).
@@ -53,7 +53,7 @@ listOfSublists([H|T],L) :-
   listOfSublists(T,L2),
   appendEvery(H,L2,L3),
   append(L2,L3,L4),
-  append(H,L4,L).
+  append([],L4,L).
 
 % ---- sublist(A,X) ---- %
 % sublist/2 returns yes if A is a sublist of X
