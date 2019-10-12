@@ -27,7 +27,8 @@ Write a Prolog predicate for each of the following operations on a list:
 Note: Each predicate should be able to print the alternative solutions if they exist.
 
 ## Contributors:
-  - [Shreyans Jain](https://github.com/jshreyans) (2018A7PS0253P)
   - [Aryaman Bhagat](https://github.com/AryamanBhagat) (2018A7PS0248P)
-  - [Pranav Gupta](https://github.com/thepranavgupta) (2018A7PS0190P)
   - [Harsh Sulakhe](https://github.com/HarshSulakhe) (2018A7PS0186P)
+  - [Pranav Gupta](https://github.com/thepranavgupta) (2018A7PS0190P)
+  - [Shreyans Jain](https://github.com/jshreyans) (2018A7PS0253P)
+  
