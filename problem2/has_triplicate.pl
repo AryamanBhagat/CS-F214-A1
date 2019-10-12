@@ -36,7 +36,7 @@ duplicate([_|T], X) :-
 % is_triplicate/2 evaluates to True if A appears at least thrice in List and subsequently prints A
 
 is_triplicate([H|T],U) :- 
-  /+member(H,U),
+  \+member(H,U),
   duplicate(T, H),
   write(H),
   append(H,U);
