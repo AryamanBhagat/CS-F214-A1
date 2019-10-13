@@ -11,10 +11,6 @@
 %weight(d, d, 29).
 
 
-weight(p, q, 1).
-weight(q, r, 1).
-weight(k, l, 1).
-
 % ---- edge(A, B, W) ----
 %       edge/3 evaluates to true when one of weight(A, B, W) exist in our knowledge base
 %       It is necessary since this is an undirected graph.
