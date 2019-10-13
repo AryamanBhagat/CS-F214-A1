@@ -12,7 +12,7 @@ member([H|_], H).
 member([_|T], X) :-
   member(T,X).
 
-duplicate([H|T], H) :- 
+duplicate([H|T], H) :-
   member(T,H).
 
 duplicate([_|T], X) :-
@@ -26,6 +26,6 @@ loop([H|T]) :-
   member(T,H) ;
   loop(T).
 
-is_triplicate([H|T]) :- 
+has_triplicate([H|T]) :-
   duplicate(T, H), write(H) ;
-  is_triplicate(T).
+  has_triplicate(T).
