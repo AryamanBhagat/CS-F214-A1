@@ -1,14 +1,4 @@
-%input for graph here in format weight(node, node, weight)
-%weight(a, b, 3).
-%weight(b, c, 2).
-%weight(c, d, 5).
-%weight(d, e, 7).
-%weight(c, e, 11).
-%weight(b, e, 13).
-%weight(e, f, 17).
-%weight(c, f, 19).
-%weight(a, a, 23).
-%weight(d, d, 29).
+% input for graph here in format weight(node, node, weight)
 
 
 % ---- edge(A, B, W) ----
