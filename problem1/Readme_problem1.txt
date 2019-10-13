@@ -8,7 +8,7 @@ Instructions to run the code
 	-open findpath.pl with a text editor
 	-copy one of the two test cases and paste them after line 2 in the code.
 	-save findpath.pl.
-	-run findpath.pl using the command swipl findpath.pl
+	-run findpath.pl using the command: swipl findpath.pl
 
 
 Test Cases
@@ -29,4 +29,3 @@ weight(c, f, 19).
 weight(a, b, 3).
 weight(b, c, 5).
 weight(c, a, 7).
-
