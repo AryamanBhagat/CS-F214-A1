@@ -1,13 +1,14 @@
 %input for graph here in format weight(node, node, weight)
-weight(a, b, 1).
-weight(b, c, 2).
-weight(c, d, 10).
-weight(d, e, 9).
-weight(c, e, 3).
-weight(b, e, 10).
-weight(e, f, 10).
-weight(c, f, 10).
-weight(a, a, 10).
+%weight(a, b, 3).
+%weight(b, c, 2).
+%weight(c, d, 5).
+%weight(d, e, 7).
+%weight(c, e, 11).
+%weight(b, e, 13).
+%weight(e, f, 17).
+%weight(c, f, 19).
+%weight(a, a, 23).
+%weight(d, d, 29).
 
 % ---- edge(A, B, W) ----
 %       edge/3 evaluates to true when one of weight(A, B, W) exist in our knowledge base
