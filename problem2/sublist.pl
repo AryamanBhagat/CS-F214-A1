@@ -57,7 +57,7 @@ listOfSublists([H|T],L) :-
 
 % ---- sublist(A,X) ---- %
 % sublist/2 returns yes if A is a sublist of X
-
+sublist([], []).
 sublist(A,X) :-
   listOfSublists(X,L),
   member(L,A).
