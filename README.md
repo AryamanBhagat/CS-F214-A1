@@ -29,6 +29,6 @@ Note: Each predicate should be able to print the alternative solutions if they e
 ## Contributors:
   - [Aryaman Bhagat](https://github.com/AryamanBhagat) (2018A7PS0248P)
   - [Harsh Sulakhe](https://github.com/HarshSulakhe) (2018A7PS0186P)
-  - [Pranav Gupta](https://github.com/thepranavgupta) (2018A7PS0190P)
+  - [Pranav Gupta](https://github.com/pranagupt) (2018A7PS0190P)
   - [Shreyans Jain](https://github.com/jshreyans) (2018A7PS0253P)
   
